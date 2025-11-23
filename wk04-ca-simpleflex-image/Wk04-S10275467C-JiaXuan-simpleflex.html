@@ -1,63 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Reponsive Flex Images</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Responsive Flex Layout</title>
+<style>
+    body {
+        background: gray;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* spacing between items */
+        padding: 10px;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+
+    .flex-item {
+        position: relative;
+        width: 18%; /* default desktop width */
+        height: 250px;
+        border: 1px solid #D3D3D3;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    /* Text overlay */
+    .flex-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Background images */
+    .flex-item:nth-child(1) { background-image: url("https://picsum.photos/id/1015/400/400"); }
+    .flex-item:nth-child(2) { background-image: url("https://picsum.photos/id/1025/400/400"); }
+    .flex-item:nth-child(3) { background-image: url("https://picsum.photos/id/1035/400/400"); }
+    .flex-item:nth-child(4) { background-image: url("https://picsum.photos/id/1045/400/400"); }
+    .flex-item:nth-child(5) { background-image: url("https://picsum.photos/id/1055/400/400"); }
+
+    /* Tablet: 3 columns */
+    @media (max-width: 920px) {
+        .flex-item {
+            width: 30%;
+        }
+    }
+
+    /* Mobile: 2 columns */
+    @media (max-width: 600px) {
+        .flex-item {
+            width: 48%; /* two columns */
+        }
+    }
+</style>
+</head>
 <body>
-	<section class="container">
-		<div class="flex-item">
-			<div class="flex-img">
-				<img src="https://picsum.photos/400/400" alt="pic1">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    
+<section class="container">
     <div class="flex-item">
-       <div class="flex-img">
-        <img src="https://picsum.photos/400/400" alt="pic2">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    
+        <div class="flex-info">
+            <h4>Beautiful View</h4>
+            <p>Nature at its best</p>
+        </div>
+    </div>
     <div class="flex-item">
-       <div class="flex-img">
-        <img src="https://picsum.photos/400/400" alt="pic3">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    
+        <div class="flex-info">
+            <h4>Ocean Waves</h4>
+            <p>Relaxing vibes</p>
+        </div>
+    </div>
     <div class="flex-item">
-     <div class="flex-img">
-        <img src="https://picsum.photos/400/400" alt="pic4">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    
+        <div class="flex-info">
+            <h4>Mountain Peaks</h4>
+            <p>Adventure awaits</p>
+        </div>
+    </div>
     <div class="flex-item">
-      <div class="flex-img">
-        <img src="https://picsum.photos/400/400" alt="pic5">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-	</section>
+        <div class="flex-info">
+            <h4>City Lights</h4>
+            <p>Urban beauty</p>
+        </div>
+    </div>
+    <div class="flex-item">
+        <div class="flex-info">
+            <h4>Sunny Beach</h4>
+            <p>Perfect getaway</p>
+        </div>
+    </div>
+</section>
 </body>
 </html>
