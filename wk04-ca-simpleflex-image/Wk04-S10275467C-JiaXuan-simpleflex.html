@@ -14,8 +14,8 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px; /* spacing between items */
+        justify-content: flex-start; /* Align items to the left */
+        gap: 10px;
         padding: 10px;
         background-color: #fff;
         box-sizing: border-box;
@@ -33,7 +33,6 @@
         box-sizing: border-box;
     }
 
-    /* Text overlay */
     .flex-info {
         position: absolute;
         bottom: 0;
@@ -43,24 +42,21 @@
         padding: 10px;
     }
 
-    /* Background images */
     .flex-item:nth-child(1) { background-image: url("https://picsum.photos/id/1015/400/400"); }
     .flex-item:nth-child(2) { background-image: url("https://picsum.photos/id/1025/400/400"); }
     .flex-item:nth-child(3) { background-image: url("https://picsum.photos/id/1035/400/400"); }
     .flex-item:nth-child(4) { background-image: url("https://picsum.photos/id/1045/400/400"); }
     .flex-item:nth-child(5) { background-image: url("https://picsum.photos/id/1055/400/400"); }
 
-    /* Tablet: 3 columns */
     @media (max-width: 920px) {
         .flex-item {
             width: 30%;
         }
     }
 
-    /* Mobile: 2 columns */
     @media (max-width: 600px) {
         .flex-item {
-            width: 48%; /* two columns */
+            width: 48%;
         }
     }
 </style>
@@ -99,4 +95,3 @@
     </div>
 </section>
 </body>
-</html>
